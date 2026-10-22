@@ -1,1 +1,248 @@
-/* Paste your Assignment 1 styles.css here. Keep the icons in src/assets/ so url(assets/...) paths keep working. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #dc4c3e;
+  color: #ffffff;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  background: #e8756b;
+}
+
+.search input {
+  width: 120px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+}
+
+.search input::placeholder {
+  color: #ffffff;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* navigation */
+.layout {
+  display: flex;
+  min-height: calc(100vh - 50px);
+}
+
+nav {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 30px 20px;
+  background: #fefbf2;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+nav li.active {
+  background: #ffffff;
+  font-weight: bold;
+}
+
+nav span {
+  color: #7e7d79;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* main content */
+main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 20px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tasks label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.tasks input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
+  border: 1px solid #aaaaaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tasks input:hover {
+  border-color: #dc4c3e;
+}
+
+.tasks input:checked {
+  background: #dc4c3e;
+  border-color: #dc4c3e;
+}
+
+.task.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #aaaaaa;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #dc4c3e;
+}
+
+.delete-btn:active {
+  transform: scale(0.9);
+}
+
+.empty {
+  color: #7e7d79;
+}
+
+/* filters */
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filters > span {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 4px;
+  color: #aaaaaa;
+}
+
+.filter-btn {
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: #444444;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  color: #dc4c3e;
+}
+
+.filter-btn:active {
+  transform: scale(0.95);
+}
+
+.filter-btn.active {
+  color: #dc4c3e;
+  font-weight: 700;
+}
+
+/* form */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.task-form input:focus {
+  outline: none;
+  border-color: #dc4c3e;
+}
+
+.task-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #dc4c3e;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #c53727;
+}
+
+.task-form button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: none;
+  }
+}
